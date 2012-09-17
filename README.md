@@ -1,4 +1,4 @@
 bjoli-com
 =========
 
-bjoli.com
+Personal webpage for Joe

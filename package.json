@@ -1,13 +1,33 @@
 {
-  "name": "application-name",
-  "version": "0.0.1",
+  "name": "bjoli-com",
+  "version": "0.0.2",
+  "author": "Joe Smith <yasumoto7@gmail.com>",
+  "description": "Personal webpage for Joe",
+  "bin": {
+    "bjoli-com": "./bin/bjoli-com"
+  },
+  "scripts": {
+    "start": "node ./bin/bjoli-com",
+    "test": "mocha"
+  },
+  "main": "./lib/bjoli-com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Yasumoto/bjoli-com.git"
+  },
   "private": true,
   "scripts": {
     "start": "node app"
   },
   "dependencies": {
-    "express": "3.0.0rc3",
-    "ejs": "*",
-    "less-middleware": "*"
+    "express": "3.0.0rc4",
+    "ejs": "0.8.x",
+    "less-middleware": "0.1.x"
+  },
+  "devDependencies": {
+    "mocha": "1.4.x"
+  }
+  "engines": {
+    "node": ">0.8"
   }
 }
