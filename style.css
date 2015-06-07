@@ -16,27 +16,27 @@ body {
   margin: 0;
   font-size: 1em;
   line-height: 1.4;
-  background-color: gray;
+  background-color: #221D23;
   padding: 5px;
 }
 ::-moz-selection {
-  background: #fe57a1;
+  background: #D45155;
   color: #fff;
   text-shadow: none;
 }
 ::selection {
-  background: #fe57a1;
+  background: #D45155;
   color: #fff;
   text-shadow: none;
 }
 a {
-  color: #C6E2FF;
+  color: #8B94A3;
 }
 a:visited {
-  color: #fdfcdc;
+  color: #918492;
 }
 a:hover {
-  color: #06e;
+  color: #918492;
 }
 a:focus {
   outline: thin dotted;
@@ -51,9 +51,16 @@ small {
 }
 h1 {
   text-align: center;
-  text-shadow: 1px 1px 1px #000;
-  color: #EBECE4;
+  text-shadow: 1px 1px 1px #0C0A0C;
+  color: #D45155;
+}
+h2 {
+  color: #FAF3DD;
 }
 p {
-  color: #EBECE4;
+  color: #C6E2FF;
+}
+li {
+    content: "• ";
+    color: #D45155;
 }
