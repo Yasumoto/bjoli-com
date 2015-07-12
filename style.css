@@ -10,33 +10,28 @@ input,
 select,
 textarea {
   font-family: sans-serif;
-  color: #222;
 }
 body {
   margin: 0;
   font-size: 1em;
   line-height: 1.4;
-  background-color: #221D23;
+  background-color: #DDDED8;
+;
   padding: 5px;
 }
-::-moz-selection {
-  background: #D45155;
-  color: #fff;
-  text-shadow: none;
-}
 ::selection {
-  background: #D45155;
+  background: #D4105D;
   color: #fff;
   text-shadow: none;
 }
 a {
-  color: #8B94A3;
+  color: #178ED7;
 }
 a:visited {
   color: #918492;
 }
 a:hover {
-  color: #918492;
+  color: #C6E2FF;
 }
 a:focus {
   outline: thin dotted;
@@ -52,15 +47,20 @@ small {
 h1 {
   text-align: center;
   text-shadow: 1px 1px 1px #0C0A0C;
-  color: #D45155;
+  color: #D4105D;
 }
 h2 {
-  color: #FAF3DD;
+  color: #F3A128;
 }
 p {
-  color: #C6E2FF;
+  color: #0B46C3;
 }
 li {
     content: "• ";
     color: #D45155;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
 }

@@ -8,18 +8,36 @@
 </head>
 <body>
   <h1>Axes of Testing</h1>
-    <p>I've tried many different tacks when explaining the benefits of unit testing to developers. Contrary to what I used to preach, they are just another tool that can be used, and certainly have their limitations. What follows is the best breakdown I've come up with to describe the various types of tests and when to lean on them. It was presented at a Twitter-internal Python tech talk, and many teammates nudged me to publish it externally. I hope it will allow others to understand how to approach adding different types of tests for your codebase.</p>
+    <p>I've tried many different tacks when explaining the benefits of unit testing to developers. Tests are not a silver bullet, they are just another tool in your warchest, and certainly have their limitations. What follows is the best breakdown I've come up with to describe the various types of tests and when to lean on them. It was presented at a Twitter-internal Python tech talk, and many teammates nudged me to publish it externally. I hope it will allow others to understand how to approach adding different types of tests for your codebase.</p>
     <h2>The Spectrum of Testing</h2>
     <p><i>Big and Small, Real and Fake</i></p>
-    <p></p>
+    <p>Initially, I started using a single axis to try to delineate between "small" unit tests and "widely-scoped" integration tests. This wasn't effective, as I got lost when trying to figure out how to deal with moving away from real dependencies and hitting other services and making sure I replaced those interactions with mocks or fakes so I could still run my tests on an airplane.</p>
+    <p>This helped me realize that I was actually staring at (at least) a two dimensional spectrum, and thus the axes were born.</p>
     <h2>Axes</h2>
     <p><img src="images/01_axes.png"></p>
+    <h3>Horizontal</h3>
+      <p>The first, horizontal axis covers whether or not you're actually hitting real live production, or just mocked out services. If you run <code>curl http://twitter.com</code>, then you're hitting the real Twitter web site. This is production. However, if you change your <code>/etc/hosts</code> file to instead point that hostname to your localhost where you're running a web server, then you've taken a step away from "production" and toward a faked out <a href="http://twitter.com">twitter.com</a>.
+    <h3>Vertical</h3>
+      <p>The second, vertical axis is used to show the "size" of a test— how much of the system is exercised when executed? Using that <code>curl</code> example above, that is a test that sweeps the gamut of infrastructure. It ensures that the <code>curl</code> binary is installed on your system, your machine is connected to the Internet (with DNS, etc), but also that Twitter's front-end infrastructure is serving correctly. This requires all of those pieces to work, and an error in one component will cause a failure for the entire test.</p>
+      <p>At the low end, you have a test which is akin to a shell script called <code>./curl</code> which just ensures you pass in <code>http://twitter.com</code> as the only argument. This isolates your execution from all other variables than just the way you're calling <code>curl</code>, but the downside is you're not really ensuring that you are using things correctly. If, for instance, <code>curl</code> gets updated to change the way it takes a URI for an argument, then you won't notice by running your test script, since it's not actually invoking <code>curl</code> at all. Also, if (heaven forbid..) <a href="http://twitter.com">twitter.com</a> goes down or moves locations, you won't notice that either.</p>
     <h2>Extremes</h2>
     <p><img src="images/02_the_extremes.png"></p>
+    <h3>Brittle</h3>
+    <h3>Dependent Services</h3>
+    <h3>Interaction Validation</h3>
+    <h3>No Confidence</h3>
     <h2>Worst of All Worlds</h2>
+    <h3>Testing In Production</h3>
+    <h3>Submit Queue</h3>
+    <h3>API Changes</h3>
+    <h3>Maintaining Mock Services</h3>
     <p><img src="images/03_worst_of_all_worlds.png"></p>
     <h2>Unit Tests and Integration Tests</h2>
     <p><img src="images/04_unit_integration_tests.png"></p>
+    <h3>Terminology</h3>
+    <h3>Unit Tests</h3>
+    <h3>Integration Tests</h3>
+    <h2>Conclusion</h2>
   <script>
     var _gaq=[['_setAccount','UA-9170507-1'],['_trackPageview']];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
