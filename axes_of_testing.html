@@ -30,7 +30,7 @@
     <p>This helped me realize that I was actually staring at (at least) a two dimensional spectrum,
        and thus the axes were born.</p>
     <h2>Axes</h2>
-    <p><img style="max-width: 100%; height: auto; width: auto;" src="images/01_axes.png" width=512 height=384></p>
+    <p><img alt="bare axes" style="max-width: 100%; height: auto; width: auto;" src="images/01_axes.png" width=512 height=384></p>
     <h3>Horizontal</h3>
       <p>The first, horizontal axis covers whether or not you're sending traffic to live
          production, or just mocked out services. If you run <code>curl http://twitter.com</code>,
@@ -57,7 +57,7 @@
          that either.</p>
     <h2>Extremes</h2>
     <p>Let's take a look at what would happen if we just followed some of these options to the max</p>
-    <p><img style="max-width: 100%; height: auto; width: auto;" src="images/02_the_extremes.png" width=512 height=384></p>
+    <p><img alt="extremes" style="max-width: 100%; height: auto; width: auto;" src="images/02_the_extremes.png" width=512 height=384></p>
     <h3>Brittle</h3>
       <p>If you are testing the whole end-to-end pipeline of a task, then a small break in any piece
          will grind your entire test to breakage. Large, broken test suites are tough to debug
@@ -79,7 +79,7 @@
          care about!</p>
     <h2>Worst of All Worlds</h2>
     <p>We can get even worse by blindly combining some of these ideas as well!</p>
-    <p><img style="max-width: 100%; height: auto; width: auto;" src="images/03_worst_of_all_worlds.png" width=512 height=384></p>
+    <p><img alt="bad ideas" style="max-width: 100%; height: auto; width: auto;" src="images/03_worst_of_all_worlds.png" width=512 height=384></p>
     <h3>Testing In Production</h3>
       <p>If you want to ensure you're causing problems for your users, throw some additional monkey
          wrenches into the works. This isn't the same as Netflix's Chaos Monkey; I'm talking about
@@ -104,7 +104,7 @@
     <h2>Unit Tests and Integration Tests</h2>
     <p>I believe that by taking a middle path between these extremes, we can come up with two groups
        of tests that will make developers lives much better.</p>
-    <p><img style="max-width: 100%; height: auto; width: auto;" src="images/04_unit_integration_tests.png" width=512 height=384></p>
+    <p><img alt="compromises" style="max-width: 100%; height: auto; width: auto;" src="images/04_unit_integration_tests.png" width=512 height=384></p>
     <h3>Terminology</h3>
     <h3>Unit Tests</h3>
       <p>These are tests that should be scoped relatively small, and rely on mocking any external
