@@ -1,3 +1,1 @@
 # robots.txt for http://www.bjoli.com/
-User-agent: *
-Disallow: axes_of_testing.html
