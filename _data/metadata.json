@@ -1,0 +1,21 @@
+{
+  "title": "Joe Smith's Blog",
+  "url": "https://bjoli.com/",
+  "language": "en",
+  "description": "I'm a software engineer stoked about Open Source Software & scalable infrastructure.",
+  "feed": {
+    "subtitle": "Joe's Homepage.",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "id": "https://bjoli.com/"
+  },
+  "jsonfeed": {
+    "path": "/feed/feed.json",
+    "url": "https://bjoli.com/feed/feed.json"
+  },
+  "author": {
+    "name": "Joe Smith",
+    "email": "yasumoto7@gmail.com",
+    "url": "https://bjoli.com/"
+  }
+}
