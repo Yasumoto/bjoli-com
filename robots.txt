@@ -1,1 +1,4 @@
-# robots.txt for http://www.bjoli.com/
+User-agent: *
+Allow: /
+
+Sitemap: https://bjoli.com/sitemap.xml
