@@ -12,6 +12,11 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("favicon.ico");
   eleventyConfig.addPassthroughCopy("robots.txt");
+  eleventyConfig.addPassthroughCopy("_headers");
+  eleventyConfig.addPassthroughCopy(
+    { ".well-known": ".well-known" },
+    { copyOptions: { dot: true } },
+  );
 
   eleventyConfig.addWatchTarget("css/**/*.css");
 
